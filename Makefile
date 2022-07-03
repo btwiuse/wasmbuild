@@ -2,7 +2,7 @@ all:
 	deno task wasmbuild
 
 deno:
-	deno run -A index.js
+	deno run -A main.ts
 
 browser:
 	cargo docs -d .

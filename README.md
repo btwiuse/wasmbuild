@@ -35,3 +35,4 @@ $ make docs
 ## links
 
 - https://deno.com/blog/wasmbuild
+- https://www.secondstate.io/articles/deno-webassembly-rust-wasi/

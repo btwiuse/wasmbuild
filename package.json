@@ -26,5 +26,8 @@
     "url": "https://github.com/btwiuse/wasmbuild/issues"
   },
   "documentation": "https://docs.rs/wasmbuild",
-  "homepage": "https://github.com/btwiuse/wasmbuild#readme"
+  "homepage": "https://github.com/btwiuse/wasmbuild#readme",
+  "devDependencies": {
+    "ssvmup": "^0.1.21"
+  }
 }

@@ -12,6 +12,12 @@ pub fn strlen(s: &str) -> usize {
   return s.len();
 }
 
+/// log message to stderr
+#[wasm_bindgen]
+pub fn logstderr(s: &str) {
+  eprintln!("{}", s);
+}
+
 #[cfg(test)]
 mod tests {
   use super::*;

@@ -1,6 +1,7 @@
 # wasmbuild starter
 
 ## build
+
 ```
 $ make
 ```
@@ -18,11 +19,13 @@ $ make browser
 ```
 
 ## run tests
+
 ```
 $ make test
 ```
 
 ## view docs
+
 ```
 $ make docs
 ```

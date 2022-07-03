@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "wasmbuild",
+  "description": "wasmbuild template",
+  "version": "0.0.1",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btwiuse/wasmbuild.git"
+  },
+  "keywords": [
+    "wasmbuild",
+    "rust",
+    "deno",
+    "wasm"
+  ],
+  "author": "btwiuse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btwiuse/wasmbuild/issues"
+  },
+  "documentation": "https://docs.rs/wasmbuild",
+  "homepage": "https://github.com/btwiuse/wasmbuild#readme"
+}

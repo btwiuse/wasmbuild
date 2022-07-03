@@ -1,0 +1,19 @@
+[package]
+name = "wasmbuild"
+version = "0.0.1"
+edition = "2021"
+description = "wasmbuild"
+license = "MIT"
+
+[lib]
+crate_type = ["cdylib"]
+path = "lib.rs"
+
+[profile.release]
+codegen-units = 1
+incremental = true
+lto = true
+opt-level = "z"
+
+[dependencies]
+wasm-bindgen = "=0.2.81"

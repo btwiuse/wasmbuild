@@ -9,3 +9,6 @@ browser:
 
 test:
 	deno run -A test.js
+
+docs:
+	cargo docs -ro

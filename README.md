@@ -1,4 +1,4 @@
-# wasmbuild
+# wasmbuild starter
 
 ## build
 ```
@@ -20,4 +20,9 @@ $ make browser
 ## run tests
 ```
 $ make test
+```
+
+## view docs
+```
+$ make docs
 ```

@@ -1,9 +1,11 @@
 [package]
 name = "wasmbuild"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
-description = "wasmbuild"
+description = "wasmbuild starter"
 license = "MIT"
+repository = "https://github.com/btwiuse/wasmbuild"
+documentation = "https://docs.rs/wasmbuild"
 
 [lib]
 crate_type = ["cdylib"]

@@ -1,5 +1,7 @@
 # wasmbuild starter
 
+![cover](https://deno.com/wasmbuild/cover.png)
+
 ## build
 
 ```
@@ -29,3 +31,7 @@ $ make test
 ```
 $ make docs
 ```
+
+## links
+
+- https://deno.com/blog/wasmbuild

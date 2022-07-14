@@ -83,7 +83,7 @@ mod oneblock {
       }};
     }
 
-    /// show traffic lights
+    /// show sums of numbers
     #[wasm_bindgen]
     pub fn solution2() -> String {
       [
@@ -97,6 +97,83 @@ mod oneblock {
         display_sum(&[std::u32::MAX, 1, 2, 3, 4]),
       ]
       .join("\n")
+    }
+  }
+
+  mod solution3 {
+    use super::super::*;
+
+    trait Shape {
+      type Output;
+      fn area(&self) -> Self::Output;
+    }
+
+    #[derive(Debug)]
+    struct Square<T>(T);
+
+    #[derive(Debug)]
+    struct Circle<T>(T);
+
+    #[derive(Debug)]
+    struct Triangle<T>(T, T);
+
+    #[derive(Debug)]
+    struct Rectangle<T>(T, T);
+
+    impl<T: std::ops::Mul<Output = T> + Copy> Shape for Square<T> {
+      type Output = T;
+      fn area(&self) -> Self::Output {
+        self.0 * self.0
+      }
+    }
+
+    impl<T: std::ops::Mul<Output = T> + Into<f64> + Copy> Shape for Circle<T> {
+      type Output = f64;
+      fn area(&self) -> Self::Output {
+        (self.0 * self.0).into() * std::f64::consts::PI
+      }
+    }
+
+    impl<T: std::ops::Mul<Output = T> + Copy> Shape for Rectangle<T> {
+      type Output = T;
+      fn area(&self) -> Self::Output {
+        self.0 * self.1
+      }
+    }
+
+    impl<T: std::ops::Mul<Output = T> + Into<f64> + Copy> Shape for Triangle<T> {
+      type Output = f64;
+      fn area(&self) -> Self::Output {
+        (self.0 * self.1).into() * 0.5
+      }
+    }
+
+    fn display_shape<S>(s: S) -> String
+    where
+      S: Shape + std::fmt::Debug,
+      <S as Shape>::Output: std::fmt::Display,
+    {
+      format!("{:?}'s area is {}", s, s.area())
+    }
+
+    macro_rules! _display_shape {
+      ($( $shape:expr),* $(,)?) => {{
+        $( println!("Area of {:?} = {}", $shape, $shape.area()); )*
+      }};
+    }
+
+    /// show area of shapes
+    #[wasm_bindgen]
+    pub fn solution3() -> String {
+      [
+        display_shape(Square(1)),
+        display_shape(Square(0.2)),
+        display_shape(Circle(1)),
+        display_shape(Rectangle(1, 2)),
+        display_shape(Rectangle(0.1, 0.2)),
+        display_shape(Triangle(1, 2)),
+        display_shape(Triangle(0.1, 0.2)),
+      ].join("\n")
     }
   }
 }

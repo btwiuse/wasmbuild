@@ -62,6 +62,43 @@ mod oneblock {
       .join("\n")
     }
   }
+
+  mod solution2 {
+    use super::super::*;
+
+    fn sum_u32(xs: &[u32]) -> Option<u32> {
+      xs.iter().try_fold(0u32, |acc, &x| acc.checked_add(x))
+    }
+
+    fn display_sum(array: &[u32]) -> String {
+      format!("Sum of {:?} = {:?}", array, sum_u32(array))
+    }
+
+    macro_rules! _display_sum {
+      ($( $array:expr ),* $(,)?) => {{
+        $(
+          let array : &[u32] = $array;
+          println!("Sum of {:?} = {:?}", array, sum_u32(array));
+        )*
+      }};
+    }
+
+    /// show traffic lights
+    #[wasm_bindgen]
+    pub fn solution2() -> String {
+      [
+        display_sum(&[]),
+        display_sum(&[0]),
+        display_sum(&[1]),
+        display_sum(&[1, 2, 3, 4]),
+        display_sum(&[std::u32::MAX]),
+        display_sum(&[std::u32::MAX, 0]),
+        display_sum(&[std::u32::MAX, 1]),
+        display_sum(&[std::u32::MAX, 1, 2, 3, 4]),
+      ]
+      .join("\n")
+    }
+  }
 }
 
 #[cfg(test)]

@@ -1,5 +1,19 @@
 use wasm_bindgen::prelude::*;
 
+static mut COUNTER: u8 = 100;
+
+/// get counter
+#[wasm_bindgen]
+pub fn counter() -> u8 {
+    unsafe { COUNTER }
+}
+
+/// increment counter
+#[wasm_bindgen]
+pub fn incr(n: Option<u8>) {
+    unsafe { COUNTER += n.unwrap_or(1) }
+}
+
 /// add two i32 numbers
 #[wasm_bindgen]
 pub fn add(a: i32, b: i32) -> i32 {

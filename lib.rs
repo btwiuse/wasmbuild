@@ -1,7 +1,5 @@
-use wasm_bindgen::prelude::*;
-
 /// add two u128 numbers
-#[wasm_bindgen]
+#[no_mangle]
 pub fn add(a: u128, b: u128) -> u128 {
   return a + b;
 }

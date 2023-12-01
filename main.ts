@@ -4,4 +4,4 @@ const {
   add,
 } = await instantiate();
 
-console.log(add(1, 2));
+console.log(add(123, 456));

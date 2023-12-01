@@ -1,8 +1,8 @@
 use wasm_bindgen::prelude::*;
 
-/// add two u64 numbers
+/// add two u128 numbers
 #[wasm_bindgen]
-pub fn add(a: u64, b: u64) -> u64 {
+pub fn add(a: u128, b: u128) -> u128 {
   return a + b;
 }
 

@@ -1,7 +1,8 @@
-use wasm_bindgen::prelude::*;
+// use wasm_bindgen::prelude::*;
 
 /// add two i32 numbers
-#[wasm_bindgen]
+// #[wasm_bindgen]
+#[no_mangle]
 pub fn add(a: i32, b: i32) -> i32 {
   return a + b;
 }

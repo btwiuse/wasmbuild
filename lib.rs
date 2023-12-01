@@ -1,8 +1,8 @@
 use wasm_bindgen::prelude::*;
 
-/// add two i32 numbers
+/// add two u64 numbers
 #[wasm_bindgen]
-pub fn add(a: i32, b: i32) -> i32 {
+pub fn add(a: u64, b: u64) -> u64 {
   return a + b;
 }
 

@@ -1,6 +1,6 @@
-/// add two u128 numbers
+/// add two u64 numbers
 #[no_mangle]
-pub fn add(a: u128, b: u128) -> u128 {
+pub fn add(a: u64, b: u64) -> u64 {
   return a + b;
 }
 

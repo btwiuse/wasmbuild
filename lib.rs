@@ -1,10 +1,10 @@
 use wasm_bindgen::prelude::*;
 
-/// add two u32 numbers
+/// add two u128 numbers
 #[wasm_bindgen]
 pub fn add(a: &str, b: &str) -> String {
-  let a_num = a.parse::<u32>().unwrap();
-  let b_num = b.parse::<u32>().unwrap();
+  let a_num = a.parse::<u128>().unwrap();
+  let b_num = b.parse::<u128>().unwrap();
   (a_num + b_num).to_string()
 }
 
